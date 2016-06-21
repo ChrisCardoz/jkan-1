@@ -30,7 +30,7 @@ dataset_fields:
     label: Primary Language
     datajson: primary_language
   - field_name: supplier_contributers
-    label: Supplier Contributers
+    label: Supplier Contributers 
     datajson: supplier_contributers
   - field_name: vendor_contributers
     label: Vendor Contribuers
