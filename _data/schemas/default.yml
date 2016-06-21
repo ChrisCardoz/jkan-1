@@ -28,28 +28,6 @@ dataset_fields:
     label: Maintainer Email
     datajson: contactPoint.hasEmail
 
-#resource_fields:
-#  - field_name: name
- #   label: Resource Name
-  #  datajson: distribution.title
-#  - field_name: url
-#    label: URL
-#    datajson: distribution.downloadURL
-#  - field_name: format
-#    label: Format
-#    datajson: distribution.format
-#    form_template: form/dropdown.html
-#    values:
-#      - api
-#      - csv
-#      - json
-#      - geojson
-#      - html
-#      - kml
-#      - kmz
-#      - shp
-#      - xml
-
 organization_fields:
   - field_name: title
     label: Title
