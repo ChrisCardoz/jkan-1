@@ -12,7 +12,7 @@ github_client_id: 69be35aaaf44d706db14
 gatekeeper_host: https://jkan-new.herokuapp.com/
 
 # Dataset schema
-schema: default
+schema: newSchema
 
 # Nav bar
 navigation:
