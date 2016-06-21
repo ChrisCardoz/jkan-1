@@ -23,21 +23,6 @@
     {% endfor %}
   </fieldset>
 
-  <h2>Resources</h2>
-  <div data-component="editable-list" data-item-label="resource">
-    <div data-hook="items">
-    {% for resource in include.dataset.resources %}
-      {% include dataset-form-resource.html %}
-    {% endfor %}
-    </div>
-
-    <button type="button" class="btn btn-default" data-hook="add-item-btn" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
-
-    <script type="text/template" data-hook="item-template">
-    {% include dataset-form-resource.html %}
-    </script>
-  </div>
-
   <fieldset>
     <h2>Additional Info</h2>
 
