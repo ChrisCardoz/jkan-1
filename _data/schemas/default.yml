@@ -20,12 +20,31 @@ dataset_fields:
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
-  - field_name: maintainer
-    label: Maintainer
-    datajson: contactPoint.fn
-  - field_name: maintainer_email
-    label: Maintainer Email
-    datajson: contactPoint.hasEmail
+  - field_name: constraints
+    label: Constraints
+    datajson: constraints
+  - field_name: url
+    label: URL
+    datajson: url
+  - field_name: primary_language
+    label: Primary Language
+    datajson: primary_language
+  - field_name: supplier_contributers
+    label: Supplier Contributers
+    datajson: supplier_contributers
+   - field_name: vendor_contributers
+    label: Vendor Contribuers
+    datajson: vendor_contributers
+  - field_name: consumer_contributers
+    label: Consumer Contributers
+    datajson: consumer_contributers
+  - field_name: independent_contributers
+    label: Independent Contributers
+    datajson: independent_contributers
+   - field_name: maturity_level
+    label: Maturity Level
+    datajson: maturity_level
+    - field_name: maturity_level
 
 organization_fields:
   - field_name: title
