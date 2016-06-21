@@ -80,7 +80,7 @@ dataset_fields:
   - field_name: has_support_resources
     label: Has Support Resources
     datajson: has_support_resources
-   - field_name: is_free_to_use
+  - field_name: is_free_to_use
     label: Is Free To Use
     datajson: is_free_to_use
   - field_name: is_open_to_contribute
