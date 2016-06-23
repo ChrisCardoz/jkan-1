@@ -8,6 +8,9 @@ dataset_fields:
     label: Organization
     form_template: form/organization.html
     datajson: publisher.name
+  - field_name: publishing_entity
+    label: Publishing Entity
+    datajson: publishing_entity
   - field_name: notes
     label: Description
     form_template: form/textarea.html
