@@ -27,7 +27,7 @@ layout: default
                   <span property="foaf:name">{{ organization.title }}</span>
                 </a>
               </h3>
-              {{ organization.description }}
+              {{ publishing_entity }}
             </div>
           </div>
         </div>
@@ -40,8 +40,8 @@ layout: default
         <a href="?view=edit" class="pull-right btn btn-default admin-only" data-hook="edit-dataset-btn">Edit</a>
       </h1>
       <p property="dct:description">{{ page.notes }}</p>
-
-      <h2>Resources</h2>
+      <br>
+     
       <ul>
         {% for resource in page.resources %}
         <li data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
