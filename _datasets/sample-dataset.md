@@ -2,7 +2,6 @@
 schema: default
 title: Sample Data Standard
 organization: Sample Coordinating Entity
-publishing_entity: Publishing Entity: Entity which publishes the standard. This may be the same as the coordinating entitiy; it may be a standards organization such as ISO, IETF, W3C; or other. Name of organization, country of organization, URL of organization, name of contact, email address of contact
 notes: A brief description what the standard includes
 abbreviations: Abbreviation(s) by which the standard is also known
 category: Aka, Domain. Subject matter of the standard
