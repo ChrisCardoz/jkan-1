@@ -27,7 +27,7 @@ dataset_fields:
   - field_name: maintainer_email
     label: Maintainer Email
     datajson: contactPoint.hasEmail
-      - field_name: abbreviations
+  - field_name: abbreviations
     label: Abbreviations 
     datajson: abbreviations
   - field_name: category
