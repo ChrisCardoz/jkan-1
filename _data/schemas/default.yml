@@ -12,95 +12,43 @@ dataset_fields:
     label: Description
     form_template: form/textarea.html
     datajson: description
-  - field_name: abbreviations
-    label: Abbreviations 
-    datajson: abbreviations
+  - field_name: license
+    label: License
+    form_template: form/license.html
+    datajson: license
   - field_name: category
     label: Category
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
-  - field_name: constraints
-    label: Constraints
-    datajson: constraints
+  - field_name: maintainer
+    label: Maintainer
+    datajson: contactPoint.fn
+  - field_name: maintainer_email
+    label: Maintainer Email
+    datajson: contactPoint.hasEmail
+
+resource_fields:
+  - field_name: name
+    label: Resource Name
+    datajson: distribution.title
   - field_name: url
     label: URL
-    datajson: url
-  - field_name: primary_language
-    label: Primary Language
-    datajson: primary_language
-  - field_name: supplier_contributers
-    label: Supplier Contributers
-    datajson: supplier_contributers
-  - field_name: vendor_contributers
-    label: Vendor Contribuers
-    datajson: vendor_contributers
-  - field_name: consumer_contributers
-    label: Consumer Contributers
-    datajson: consumer_contributers
-  - field_name: independent_contributers
-    label: Independent Contributers
-    datajson: independent_contributers
-  - field_name: maturity_level
-    label: Maturity Level
-    datajson: maturity_level
-  - field_name: contributor_activity
-    label: Contributor Activity
-    datajson: contributor_activity
-  - field_name: estimated_supplier_market
-    label: Estimated Supplier Market
-    datajson: estimated_supplier_market
-  - field_name: estimated_consumer_market
-    label: Estimated Consumer Market
-    datajson: estimated_consumer_market
-  - field_name: estimated_vendor_market
-    label: Estimated Vendor Market
-    datajson: estimated_vendor_market
-  - field_name: latest_revision
-    label: Latest Revision
-    datajson: latest_revision
-  - field_name: has_schematics
-    label: Has Schematics
-    datajson: has_schematics
-  - field_name: has_extendable_schematics
-    label: Has Extendable Schematics
-    datajson: has_extendable_schematics
-  - field_name: has_semantics
-    label: Has Semantics
-    datajson: has_semantics
-  - field_name: has_test_tools
-    label: Has Test Tools
-    datajson: has_test_tools
-  - field_name: has_sdks
-    label: Has SDKs
-    datajson: has_sdks
-  - field_name: has_certification_mechanism
-    label: Has Certification Mechanism
-    datajson: has_certification_mechanism
-  - field_name: has_support_resources
-    label: Has Support Resources
-    datajson: has_support_resources
-   - field_name: is_free_to_use
-    label: Is Free To Use
-    datajson: is_free_to_use
-  - field_name: is_open_to_contribute
-    label: Is Open To Contribute
-    datajson: is_open_to_contribute
-  - field_name: has_sample_contract_language
-    label: Has Sample Contract Language
-    datajson: Has Sample Contract Language
-  - field_name: supports_api
-    label: Supports API
-    datajson: supports_api
-  - field_name: supports_bulk_download
-    label: Supports Bulk Download
-    datajson: supports_bulk_download
-  - field_name: has_geospatial_elements
-    label: Has Geospatial Elements
-    datajson: has_geospatial_elements
-  - field_name: has_temporal_elements
-    label: Has Temporal Elements
-    datajson: has_temporal_elements
+    datajson: distribution.downloadURL
+  - field_name: format
+    label: Format
+    datajson: distribution.format
+    form_template: form/dropdown.html
+    values:
+      - api
+      - csv
+      - json
+      - geojson
+      - html
+      - kml
+      - kmz
+      - shp
+      - xml
 
 organization_fields:
   - field_name: title
