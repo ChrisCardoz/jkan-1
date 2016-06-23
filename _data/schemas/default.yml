@@ -30,11 +30,6 @@ dataset_fields:
   - field_name: abbreviations
     label: Abbreviations 
     datajson: abbreviations
-  - field_name: category
-    label: Category
-    form_template: form/category.html
-    display_template: display/category.html
-    datajson: category
   - field_name: constraints
     label: Constraints
     datajson: constraints
