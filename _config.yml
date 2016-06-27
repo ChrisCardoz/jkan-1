@@ -17,9 +17,9 @@ schema: default
 # Nav bar
 navigation:
   - title: Data Standards
-    url: /datasets/
+    url: /data_standards/
   - title: Coordinators
-    url: /organizations/
+    url: /coordinators/
 
 # Collections
 collections:
