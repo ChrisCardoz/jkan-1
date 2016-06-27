@@ -1,5 +1,5 @@
 ---
-title: Sample Coordinating Entity
+title: Sample Coordinator
 publishing_entity: Publishing Entity
 description: Publishing Entity
 logo: http://www1.nyc.gov/assets/home/images/mayor/index/bloomberg.png
