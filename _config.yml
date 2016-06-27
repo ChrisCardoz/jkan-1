@@ -18,7 +18,7 @@ schema: default
 navigation:
   - title: Data Standards
     url: /datasets/
-  - title: Coordinator
+  - title: Coordinators
     url: /organizations/
 
 # Collections
