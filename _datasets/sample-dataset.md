@@ -1,7 +1,7 @@
 ---
 schema: default
 title: Sample Data Standard
-organization: Sample Dataset
+organization: Sample Coordinator
 notes: A brief description what the standard includes
 abbreviations: Abbreviation(s) by which the standard is also known
 category: Aka, Domain. Subject matter of the standard
