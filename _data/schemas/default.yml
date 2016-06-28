@@ -4,9 +4,9 @@ dataset_fields:
   - field_name: title
     label: Title
     datajson: title
-  - field_name: organization
-    label: Organization
-    form_template: form/organization.html
+  - field_name: coordinator
+    label: Coordinator
+    form_template: form coordinator.html
     datajson: publisher.name
   - field_name: publishing_entity
     label: Publishing Entity
@@ -137,8 +137,7 @@ resource_fields:
       - kmz
       - shp
       - xml
-
-organization_fields:
+ coordinator_fields:
   - field_name: title
     label: Title
   - field_name: description

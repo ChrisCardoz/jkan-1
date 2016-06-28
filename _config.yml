@@ -19,16 +19,16 @@ navigation:
   - title: Data Standards
     url: /datasets/
   - title: Coordinators
-    url: /organizations/
+    url: /coordinators/
 
 # Collections
 collections:
   datasets:
     output: true
     permalink: /datasets/:path/
-  organizations:
+  coordinators:
     output: true
-    permalink: /organizations/:path/
+    permalink: /coordinators/:path/
 
 # Collections (cont'd)
 defaults:
@@ -38,12 +38,12 @@ defaults:
     values:
       layout: dataset
       category: Uncategorized
-      organization: N/A
+      coordinator: N/A
   - scope:
       path: ""
-      type: organizations
+      type: coordinators
     values:
-      layout: organization
+      layout: coordinator
 
 # Markdown settings
 markdown: kramdown

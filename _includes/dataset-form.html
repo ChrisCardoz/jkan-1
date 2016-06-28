@@ -1,7 +1,7 @@
 {% assign schema = include.dataset.schema | default: site.schema %}
 {% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
-{% assign dataset_system_fields = "title|organization|notes" | split: "|" %}
+{% assign dataset_system_fields = "title|coordinator|notes" | split: "|" %}
 {% assign datasets = site.collections | where:"label","datasets" | first %}
 <form data-component="form dataset-form"
   data-file-dir="{{ datasets.relative_directory }}"

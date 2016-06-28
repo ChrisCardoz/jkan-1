@@ -1,0 +1,29 @@
+{% assign schema = page.schema | default: site.schema %}
+{% assign coordinator_fields = site.data.schemas[schema].coordinator_fields %}
+{% assign coordinator_system_fields = "title|description|logo" | split: "|" %}
+{% assign coordinators = site.collections | where: "label", "coordinators" | first %}
+<form data-component="form"
+  data-file-dir="{{ coordinators.relative_directory }}"
+  data-render-dir="coordinators"
+  {% if include.coordinator %}
+    data-file-path="{{ include.coordinator.path }}"
+    data-render-path="{{ include.coordinator.url }}"
+  {% endif %}>
+  <input type="hidden" id="schema" name="schema" value="{{ schema }}">
+
+  <fieldset>
+    {% for field in coordinator_fields %}
+      {% assign template = field.form_template | default: "form/text.html" %}
+      {% assign field_name = field.field_name %}
+      {% assign value = include.coordinator[field_name] %}
+      {% include {{ template }} field=field field_name=field_name value=value %}
+    {% endfor %}
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  {% if include.coordinator %}
+    <button class="btn btn-danger" data-component="delete-page-button" data-file-path="{{ include.coordinator.path }}">
+      <i class="fa fa-trash"></i> Delete coordinator
+    </button>
+  {% endif %}
+</form>

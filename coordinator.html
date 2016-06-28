@@ -1,0 +1,26 @@
+---
+title: coordinators
+layout: default
+permalink: /coordinators/
+---
+{% include breadcrumbs.html %}
+
+<a href="{{ site.baseurl }}/add-coordinator/" class="btn btn-default pull-right admin-only" data-hook="add-coordinator-btn"><i class="fa fa-plus"></i> Add coordinator</a>
+
+{% for coordinator in site.coordinators %}
+  {% assign dataset_count = site.datasets | where:"coordinator", coordinator.title | size %}
+  <div class="media">
+    <div class="media-left">
+      {% if coordinator.logo and coordinator.logo != empty %}
+        <a href="{{ site.baseurl }}{{ coordinator.url }}" class="coordinator-thumbnail">
+          <img class="media-object" src="{{ coordinator.logo }}" alt="{{ coordinator.title }}">
+        </a>
+      {% endif %}
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><a href="{{ site.baseurl }}{{ coordinator.url }}">{{ coordinator.title }}</a></h4>
+      <p>{{ coordinator.description }}</p>
+      <p><a href="{{ site.baseurl }}/datasets/?coordinator={{ coordinator.title | slugify }}">{{ dataset_count }} datasets</a></p>
+    </div>
+  </div>
+{% endfor %}
