@@ -6,7 +6,7 @@ dataset_fields:
     datajson: title
   - field_name: coordinator
     label: Coordinator
-    form_template: form coordinator.html
+    form_template: form/coordinator.html
     datajson: publisher.name
   - field_name: publishing_entity
     label: Publishing Entity
