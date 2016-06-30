@@ -136,7 +136,8 @@ resource_fields:
       - kmz
       - shp
       - xml
- coordinator_fields:
+      
+coordinator_fields:
   - field_name: title
     label: Title
   - field_name: description
