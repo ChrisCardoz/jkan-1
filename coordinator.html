@@ -5,7 +5,7 @@ permalink: /coordinators/
 ---
 {% include breadcrumbs.html %}
 
-<a href="{{ site.baseurl }}/add-coordinator/" class="btn btn-default pull-right admin-only" data-hook="add-coordinator-btn"><i class="fa fa-plus"></i> Add coordinator</a>
+<a href="{{ site.baseurl }}/add-coordinator/" class="btn btn-default pull-right admin-only" data-hook="add-coordinator-btn"><i class="fa fa-plus"></i> Add Coordinator</a>
 
 {% for coordinator in site.coordinators %}
   {% assign dataset_count = site.datasets | where:"coordinator", coordinator.title | size %}
