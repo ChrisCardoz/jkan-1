@@ -1,0 +1,46 @@
+{% assign schema = include.datastandard.schema | default: site.schema %}
+{% assign datastandard_fields = site.data.schemas[schema].datastandard_fields %}
+{% assign resource_fields = site.data.schemas[schema].resource_fields %}
+{% assign datastandard_system_fields = "title|coordinator|notes" | split: "|" %}
+{% assign datastandards = site.collections | where:"label","datastandards" | first %}
+<form data-component="form datastandard-form"
+  data-file-dir="{{ datastandards.relative_directory }}"
+  data-render-dir="datastandards"
+  {% if include.datastandard %}
+    data-file-path="{{ include.datastandard.path }}"
+    data-render-path="{{ include.datastandard.url }}"
+  {% endif %}>
+  <input type="hidden" id="schema" name="schema" value="{{ schema }}">
+
+  <fieldset>
+    {% for field in datastandard_fields %}
+      {% if datastandard_system_fields contains field.field_name %}
+        {% assign template = field.form_template | default: "form/text.html" %}
+        {% assign field_name = field.field_name %}
+        {% assign value = include.datastandard[field_name] %}
+        {% include {{ template }} field=field field_name=field_name value=value %}
+      {% endif %}
+    {% endfor %}
+  </fieldset>
+
+  <fieldset>
+    <h2>Additional Info</h2>
+
+    {% for field in datastandard_fields %}
+      {% unless datastandard_system_fields contains field.field_name %}
+        {% assign template = field.form_template | default: "form/text.html" %}
+        {% assign field_name = field.field_name %}
+        {% assign value = include.datastandard[field_name] %}
+        {% include {{ template }} field=field field_name=field_name value=value %}
+      {% endunless %}
+    {% endfor %}
+
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  {% if include.datastandard %}
+    <button class="btn btn-danger" data-component="delete-page-button" data-file-path="{{ include.datastandard.path }}">
+      <i class="fa fa-trash"></i> Delete datastandard
+    </button>
+  {% endif %}
+</form>

@@ -1,24 +1,24 @@
 ---
 layout: default
 ---
-{% include breadcrumbs.html parent="Datasets" %}
+{% include breadcrumbs.html parent="Datastandards" %}
 {% assign schema = page.schema | default: site.schema %}
-{% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
-{% assign dataset_system_fields = "title|coordinator|notes|license" | split: "|" %}
+{% assign datastandard_fields = site.data.schemas[schema].datastandard_fields %}
+{% assign datastandard_system_fields = "title|coordinator|notes|license" | split: "|" %}
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign resource_system_fields = "name|url|format|description" | split: "|" %}
 
 {% assign coordinator = site.coordinators | where:"title",page.coordinator | first %}
-{% capture coordinator_url %}{{ site.baseurl }}/datasets/?coordinator={{ coordinator.title | slugify }}{% endcapture %}
+{% capture coordinator_url %}{{ site.baseurl }}/datastandards/?coordinator={{ coordinator.title | slugify }}{% endcapture %}
 
 <div data-component="view-switcher">
-  <div class="row" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="{{ page.url }}">
+  <div class="row" data-component="datastandard-display" data-hook="view" data-view="display" typeof="dcat:Datastandard" resource="{{ page.url }}">
     {% if coordinator %}
       <div class="col-sm-3" property="dct:publisher" resource="{{ coordinator_url }}">
         <div class="panel panel-default">
             <div class="panel-heading">
               {% if coordinator.logo and coordinator.logo != empty %}
-              <a href="{{ site.baseurl }}/datasets/?coordinator={{ coordinator.title | slugify }}" class="thumbnail"><img src="{{ coordinator.logo }}" alt="{{ coordinator.title }} logo"></a>
+              <a href="{{ site.baseurl }}/datastandards/?coordinator={{ coordinator.title | slugify }}" class="thumbnail"><img src="{{ coordinator.logo }}" alt="{{ coordinator.title }} logo"></a>
               {% endif %}
             </div>
             <div class="panel-body">
@@ -37,7 +37,7 @@ layout: default
     {% endif %}
       <h1>
         <span property="dct:title">{{ page.title }}</span>
-        <a href="?view=edit" class="pull-right btn btn-default admin-only" data-hook="edit-dataset-btn">Edit</a>
+        <a href="?view=edit" class="pull-right btn btn-default admin-only" data-hook="edit-datastandard-btn">Edit</a>
       </h1>
       <p property="dct:description">{{ page.notes }}</p>
       <br>
@@ -70,7 +70,7 @@ layout: default
         {% endfor %}
       </ul>
 
-      <table class="table table-striped dataset-details">
+      <table class="table table-striped datastandard-details">
         {% if page.license and page.license != empty %}
           <tr>
             <th>License</th>
@@ -81,8 +81,8 @@ layout: default
             </td>
           </tr>
         {% endif %}
-        {% for field in dataset_fields %}
-          {% unless dataset_system_fields contains field.field_name %}
+        {% for field in datastandard_fields %}
+          {% unless datastandard_system_fields contains field.field_name %}
             {% assign value = page[field[field_name]] %}
             {% if value %}
               {% if field.display_template %}
@@ -103,7 +103,7 @@ layout: default
 
   <div class="row" data-hook="view" data-view="edit">
     <div class="col-sm-8 col-sm-offset-2">
-      {% include dataset-form.html dataset=page %}
+      {% include datastandard-form.html datastandard=page %}
     </div>
     <div class="col-sm-2">
       <a href="{{ site.baseurl }}{{ page.url }}" class="btn btn-default pull-right">Cancel</a>

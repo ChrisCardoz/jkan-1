@@ -11,21 +11,21 @@ theme: Default
 github_client_id: 69be35aaaf44d706db14
 gatekeeper_host: https://jkan-new.herokuapp.com/
 
-# Dataset schema
+# Datastandard schema
 schema: default
 
 # Nav bar
 navigation:
   - title: Data Standards
-    url: /datasets/
+    url: /datastandards/
   - title: Coordinators
     url: /coordinators/
 
 # Collections
 collections:
-  datasets:
+  datastandards:
     output: true
-    permalink: /datasets/:path/
+    permalink: /datastandards/:path/
   coordinators:
     output: true
     permalink: /coordinators/:path/
@@ -34,9 +34,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: datasets
+      type: datastandards
     values:
-      layout: dataset
+      layout: datastandard
       category: Uncategorized
       coordinator: N/A
   - scope:

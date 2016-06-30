@@ -1,11 +1,11 @@
 ---
 ---
-[{% for dataset in site.datasets %}
+[{% for datastandard in site.datastandards %}
   {
-    "title": {{ dataset.title | jsonify }},
-    "coordinator": {{ dataset.coordinator | jsonify }}{% if dataset.notes != "" %},
-    "notes": {{ dataset.notes | jsonify }}{% endif %}{% if dataset.notes != "" %},
-    "category": {{ dataset.category | jsonify }}{% endif %},
-    "url": "{{ site.baseurl }}{{ dataset.url }}"
+    "title": {{ datastandard.title | jsonify }},
+    "coordinator": {{ datastandard.coordinator | jsonify }}{% if datastandard.notes != "" %},
+    "notes": {{ datastandard.notes | jsonify }}{% endif %}{% if datastandard.notes != "" %},
+    "category": {{ datastandard.category | jsonify }}{% endif %},
+    "url": "{{ site.baseurl }}{{ datastandard.url }}"
   }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]

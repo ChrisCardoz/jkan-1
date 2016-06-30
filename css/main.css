@@ -2,7 +2,7 @@
   width: 64px;
 }
 
-dataset {
+datastandard {
   display: block;
   border-bottom: 1px #d6d6d6 solid;
   padding-bottom: 20px;
@@ -25,11 +25,11 @@ dataset {
   margin-bottom: 10px;
 }
 
-.datasets-count {
+.datastandards-count {
   display: inline-block;
 }
 
-.add-dataset-btn {
+.add-datastandard-btn {
   margin-top: 15px;
 }
 

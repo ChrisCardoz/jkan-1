@@ -1,0 +1,6 @@
+{% for datastandard in include.datastandards %}
+<datastandard>
+  <h3><a href="{{ site.baseurl }}{{ datastandard.url }}">{{ datastandard.title }}</a></h3>
+  {{ datastandard.notes | truncate: 300, '...' }}
+</datastandard>
+{% endfor %}

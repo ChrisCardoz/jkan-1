@@ -1,6 +1,6 @@
 # To add fields, make a new schema file in this directory
 # and change the schema setting in _config.yml to its name
-dataset_fields:
+datastandard_fields:
   - field_name: title
     label: Title
     datajson: title

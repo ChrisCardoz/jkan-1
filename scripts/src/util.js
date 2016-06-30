@@ -30,14 +30,14 @@ export function slugify (text) {
 
 
 // Given an object of filters to use, returns a function to be used by _.filter()
-export function createDatasetFilters (filters) {
-  return function (dataset) {
+export function createDatastandardFilters (filters) {
+  return function (datastandard) {
     const conditions = []
     if (filters.coordinator) {
-      conditions.push(dataset.coordinator && slugify(dataset.coordinator) === filters.coordinator)
+      conditions.push(datastandard.coordinator && slugify(datastandard.coordinator) === filters.coordinator)
     }
     if (filters.category) {
-      conditions.push(dataset.category && slugify(dataset.category).indexOf(filters.category) !== -1)
+      conditions.push(datastandard.category && slugify(datastandard.category).indexOf(filters.category) !== -1)
     }
     return conditions.every(function (value) { return !!value })
   }
