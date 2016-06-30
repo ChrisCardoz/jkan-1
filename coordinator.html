@@ -1,5 +1,5 @@
 ---
-title: coordinators
+title: Coordinators
 layout: default
 permalink: /coordinators/
 ---
@@ -8,7 +8,7 @@ permalink: /coordinators/
 <a href="{{ site.baseurl }}/add-coordinator/" class="btn btn-default pull-right admin-only" data-hook="add-coordinator-btn"><i class="fa fa-plus"></i> Add coordinator</a>
 
 {% for coordinator in site.coordinators %}
-  {% assign dataset_count = site.datasets | where:"coordinator", coordinator.title | size %}
+  {% assign dataset_count = site.datasets | where:"Coordinator", coordinator.title | size %}
   <div class="media">
     <div class="media-left">
       {% if coordinator.logo and coordinator.logo != empty %}
