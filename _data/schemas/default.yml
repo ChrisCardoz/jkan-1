@@ -115,7 +115,6 @@ dataset_fields:
     label: Has Temporal Elements
     datajson: has_temporal_elements
 
-
 resource_fields:
   - field_name: name
     label: Resource Name
