@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% include breadcrumbs.html parent="Datastandards" %}
+{% include breadcrumbs.html parent="Data Standards" %}
 {% assign schema = page.schema | default: site.schema %}
 {% assign datastandard_fields = site.data.schemas[schema].datastandard_fields %}
 {% assign datastandard_system_fields = "title|coordinator|notes|license" | split: "|" %}
