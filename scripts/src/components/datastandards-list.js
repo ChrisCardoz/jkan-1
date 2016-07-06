@@ -32,7 +32,7 @@ export default class {
     setContent(elements.datastandardsItems, datastandardsMarkup)
 
     // // Datastandard count
-    const datastandardsCountMarkup = filteredDatastandards.length + ' datastandards'
+    const datastandardsCountMarkup = filteredDatastandards.length + ' Data Standard(s)'
     setContent(elements.datastandardsCount, datastandardsCountMarkup)
 
     // Search datastandards listener
@@ -46,7 +46,7 @@ export default class {
       setContent(elements.datastandardsItems, resultsMarkup)
 
       // Datastandard count
-      const resultsCountMarkup = results.length + ' datastandards'
+      const resultsCountMarkup = results.length + ' Data Standard(s)'
       setContent(elements.datastandardsCount, resultsCountMarkup)
     })
   }
