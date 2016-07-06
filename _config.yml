@@ -1,6 +1,6 @@
 title: GovEx
-greeting: Chris is coding this website now. 
-description: A lightweight, backend-free open data portal, powered by Jekyll.
+greeting: Welcome to GovEx's Data Standard Portal
+description: A lightweight, backend-free open data standard portal, powered by Jekyll.
 baseurl: /jkan-1
 logo: /img/govexlogo-large.png
 
