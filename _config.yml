@@ -20,6 +20,8 @@ navigation:
     url: /datastandards/
   - title: Coordinators
     url: /coordinators/
+  - title: Categories
+    url: /categories/
 
 # Collections
 collections:
