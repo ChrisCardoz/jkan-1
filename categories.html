@@ -7,20 +7,16 @@ permalink: /categories/
 
 <a href="{{ site.baseurl }}/add-category/" class="btn btn-default pull-right admin-only" data-hook="add-category-btn"><i class="fa fa-plus"></i> Add Category</a>
 
-{% for category in site.categories %}
-  {% assign datastandard_count = site.datastandards | where:"category", category.title | size %}
-  <div class="media">
-    <div class="media-left">
+<div class="homepage-categories">
+{% for category in site.data.categories %}
+  {% if category.featured == true %}
+    {% capture logo_alt %}{{ category.name }}{% if category.logo_credit and category.logo_credit != empty %} logo by {{ category.logo_credit }}{% endif %}{% endcapture %}
+    <a href="{{ site.baseurl }}/datastandards/?category={{ category.name | slugify }}" class="thumbnail" title="{{ logo_alt }}">
       {% if category.logo and category.logo != empty %}
-        <a href="{{ site.baseurl }}{{ category.url }}" class="category-thumbnail">
-          <img class="media-object" src="{{ category.logo }}" alt="{{ category.title }}">
-        </a>
+        <img src="{{ site.baseurl }}{{ category.logo }}" alt="{{ logo_alt }}">
       {% endif %}
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading"><a href="{{ site.baseurl }}{{ category.url }}">{{ category.title }}</a></h4>
-      <p>{{ category.description }}</p>
-      <p><a href="{{ site.baseurl }}/datastandards/?category={{ category.title | slugify }}">{{ datastandard_count }} datastandards</a></p>
-    </div>
-  </div>
+      {{ category.name }}
+    </a>
+  {% endif %}
 {% endfor %}
+</div>
