@@ -9,7 +9,7 @@ theme: Default
 
 # Authentication
 github_client_id: 9aedff4dea2b4527cfc7
-gatekeeper_host: jkan-1.herokuapp.com
+gatekeeper_host: https://jkan-1.herokuapp.com
 
 # Datastandard schema
 schema: default
