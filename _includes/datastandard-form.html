@@ -32,7 +32,7 @@
             {% assign field_name = field.field_name %}
             {% assign value = include.datastandard[field_name] %}
             {% include {{ template }} field=field field_name=field_name value=value %}
-          {% endunless %}
+          {% endif %}
         {% endfor %}
     
     {% for field in datastandard_fields %}
