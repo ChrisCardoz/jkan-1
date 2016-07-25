@@ -2,9 +2,11 @@
 schema: default
 title: Sample Data Standard
 coordinator: Sample Coordinator
-notes: jfgvhjbn
-publishing_entity: ''
+notes: A brief description what the standard includes
+publishing_entity: 'Entity which publishes the standard. This may be the same as the coordinating entitiy; it may be a standards organization such as ISO, IETF, W3C; or other. Name of organization, country of organization, URL of organization, name of contact, email address of contact'
 license: ''
+category:
+  - Uncategorized
 maintainer: ''
 maintainer_email: ''
 abbreviations: Abbreviation(s) by which the standard is also known
