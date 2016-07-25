@@ -91,7 +91,7 @@ datastandard_fields:
     datajson: is_open_to_contribute
   - field_name: has_sample_contract_language
     label: Has Sample Contract Language
-    datajson: Has Sample Contract Language
+    datajson: has_sample_contract_language
   - field_name: supports_api
     label: Supports API
     datajson: supports_api
