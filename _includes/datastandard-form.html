@@ -2,6 +2,7 @@
 {% assign datastandard_fields = site.data.schemas[schema].datastandard_fields %}
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign datastandard_system_fields = "title|coordinator|notes" | split: "|" %}
+{% assign star_fields = "maturity_level" | split: "|" %}
 {% assign dropdown_fields = "maturity_level|has_schematics|has_extendable_schematics|has_semantics|has_test_tools|has_sdks|has_certification_mechanism|has_support_resources|is_free_to_use|is_open_to_contribute|has_sample_contract_language|supports_api|supports_bulk_download|has_geospatial_elements|has_temporal_elements|" | split: "|" %}
 {% assign datastandards = site.collections | where:"label","datastandards" | first %}
 <form data-component="form datastandard-form"
