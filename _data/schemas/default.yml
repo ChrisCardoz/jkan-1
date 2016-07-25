@@ -24,12 +24,6 @@ datastandard_fields:
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
-  - field_name: maintainer
-    label: Maintainer
-    datajson: contactPoint.fn
-  - field_name: maintainer_email
-    label: Maintainer Email
-    datajson: contactPoint.hasEmail
   - field_name: abbreviations
     label: Abbreviations 
     datajson: abbreviations
@@ -115,28 +109,6 @@ datastandard_fields:
     label: Has Temporal Elements
     datajson: has_temporal_elements
 
-resource_fields:
-  - field_name: name
-    label: Resource Name
-    datajson: distribution.title
-  - field_name: url
-    label: URL
-    datajson: distribution.downloadURL
-  - field_name: format
-    label: Format
-    datajson: distribution.format
-    form_template: form/dropdown.html
-    values:
-      - api
-      - csv
-      - json
-      - geojson
-      - html
-      - kml
-      - kmz
-      - shp
-      - xml
-      
 coordinator_fields:
   - field_name: title
     label: Title
