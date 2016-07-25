@@ -26,9 +26,17 @@
 
   <fieldset>
     <h2>Additional Info</h2>
-
     {% for field in datastandard_fields %}
-      {% unless datastandard_system_fields contains field.field_name %}
+          {% if dropdown_fields contains field.field_name %}
+            {% assign template = field.form_template | default: "form/dropdown.html" %}
+            {% assign field_name = field.field_name %}
+            {% assign value = include.datastandard[field_name] %}
+            {% include {{ template }} field=field field_name=field_name value=value %}
+          {% endunless %}
+        {% endfor %}
+    
+    {% for field in datastandard_fields %}
+      {% unless datastandard_system_fields contains field.field_name && dropdown_fields contains field.field_name %}
         {% assign template = field.form_template | default: "form/text.html" %}
         {% assign field_name = field.field_name %}
         {% assign value = include.datastandard[field_name] %}
