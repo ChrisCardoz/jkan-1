@@ -13,6 +13,7 @@ datastandard_fields:
     datajson: publishing_entity
   - field_name: notes
     label: Description
+    def: describe something
     form_template: form/textarea.html
     datajson: description
   - field_name: category
