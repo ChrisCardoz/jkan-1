@@ -36,7 +36,7 @@ datastandard_fields:
     label: Supplier Contributers 
     datajson: supplier_contributers
   - field_name: vendor_contributers
-    label: Vendor Contribuers
+    label: Vendor Contributers
     datajson: vendor_contributers
   - field_name: consumer_contributers
     label: Consumer Contributers
