@@ -3,7 +3,7 @@
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign datastandard_system_fields = "title|coordinator|notes" | split: "|" %}
 {% assign star_fields = "maturity_level" | split: "|" %}
-{% assign dropdown_fields = "maturity_level|has_schematics|has_extendable_schematics|has_semantics|has_test_tools|has_sdks|has_certification_mechanism|has_support_resources|is_free_to_use|is_open_to_contribute|has_sample_contract_language|supports_api|supports_bulk_download|has_geospatial_elements|has_temporal_elements|" | split: "|" %}
+{% assign dropdown_fields = "has_schematics|has_extendable_schematics|has_semantics|has_test_tools|has_sdks|has_certification_mechanism|has_support_resources|is_free_to_use|is_open_to_contribute|has_sample_contract_language|supports_api|supports_bulk_download|has_geospatial_elements|has_temporal_elements|" | split: "|" %}
 {% assign datastandards = site.collections | where:"label","datastandards" | first %}
 <form data-component="form datastandard-form"
   data-file-dir="{{ datastandards.relative_directory }}"
@@ -26,7 +26,30 @@
   </fieldset>
 
   <fieldset>
-    <h2>Additional Info</h2>
+    <h2>Additional Fields</h2>
+  
+    {% for field in datastandard_fields %}
+      {% unless datastandard_system_fields contains field.field_name %}
+        {% unless star_fields contains field.field_name %}
+          {% unless dropdown_fields contains field.field_name %}
+            {% assign template = field.form_template | default: "form/text.html" %}
+            {% assign field_name = field.field_name %}
+            {% assign value = include.datastandard[field_name] %}
+            {% include {{ template }} field=field field_name=field_name value=value %}
+          {% endunless %}
+        {% endunless %} 
+      {% endunless %}
+    {% endfor %}
+    
+    {% for field in datastandard_fields %}
+          {% if star_fields contains field.field_name %}
+            {% assign template = field.form_template | default: "form/dropdownStars.html" %}
+            {% assign field_name = field.field_name %}
+            {% assign value = include.datastandard[field_name] %}
+            {% include {{ template }} field=field field_name=field_name value=value %}
+          {% endif %}
+    {% endfor %}
+    
     {% for field in datastandard_fields %}
           {% if dropdown_fields contains field.field_name %}
             {% assign template = field.form_template | default: "form/dropdown.html" %}
@@ -34,15 +57,6 @@
             {% assign value = include.datastandard[field_name] %}
             {% include {{ template }} field=field field_name=field_name value=value %}
           {% endif %}
-        {% endfor %}
-    
-    {% for field in datastandard_fields %}
-      {% unless datastandard_system_fields contains field.field_name && dropdown_fields contains field.field_name %}
-        {% assign template = field.form_template | default: "form/text.html" %}
-        {% assign field_name = field.field_name %}
-        {% assign value = include.datastandard[field_name] %}
-        {% include {{ template }} field=field field_name=field_name value=value %}
-      {% endunless %}
     {% endfor %}
 
   </fieldset>
