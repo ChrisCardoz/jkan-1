@@ -2,8 +2,11 @@
   <label for="{{ include.field_name }}">{{ include.field.label }}</label>
   <select class="form-control" id="{{ include.field_name }}" name="{{ include.field_name }}">
     <option value="">{{ include.field.placeholder | default: "Select..." }}</option>
-    <option value="Yes">{{ include.field.placeholder | default: "Yes" }}</option>
-    <option value="No">{{ include.field.placeholder | default: "No" }}</option>
+    <option value="1 Star">{{ include.field.placeholder | default: "1 Star" }}</option>
+    <option value="2 Stars">{{ include.field.placeholder | default: "2 Stars" }}</option>
+    <option value="3 Stars">{{ include.field.placeholder | default: "3 Stars" }}</option>
+    <option value="4 Stars">{{ include.field.placeholder | default: "4 Stars" }}</option>
+    <option value="5 Stars">{{ include.field.placeholder | default: "5 Stars" }}</option>
     {% for value in field.values %}
       <option{% if include.value == value %} selected="selected"{% endif %}>{{ value }}</option>
     {% endfor %}
