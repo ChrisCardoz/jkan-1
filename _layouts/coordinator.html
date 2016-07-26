@@ -17,7 +17,9 @@ layout: default
         {{ page.title }}
         <a href="?view=edit" class="pull-right btn btn-default admin-only">Edit</a>
       </h1>
-      <p>{{ page.description }}</p>
+      <p>{{ page.country }}</p>
+      <p>{{ page.website }}</p>
+      <p>{{ page.email }}</p>
       <div data-component="datastandards-list" data-coordinator="{{ page.title | slugify }}">
         <h3 class="datastandards-count" data-hook="datastandards-count"></h3>
         <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
