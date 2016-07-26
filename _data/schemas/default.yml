@@ -143,7 +143,7 @@ coordinator_fields:
     form_template: form/textarea.html
   - field_name: country 
     label: Country
-    def: Country of Coordinator
+    def: Country of coordinator
     form_template: form/textarea.html
   - field_name: url
     label: URL
