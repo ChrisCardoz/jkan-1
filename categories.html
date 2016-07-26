@@ -5,8 +5,6 @@ permalink: /categories/
 ---
 {% include breadcrumbs.html %}
 
-<a href="{{ site.baseurl }}/add-category/" class="btn btn-default pull-right admin-only" data-hook="add-category-btn"><i class="fa fa-plus"></i> Add Category</a>
-
 <div class="homepage-categories">
 {% for category in site.data.categories %}
   {% if category.featured == true %}
