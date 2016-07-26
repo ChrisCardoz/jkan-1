@@ -145,8 +145,8 @@ coordinator_fields:
     label: Country
     def: Country of coordinator
     form_template: form/textarea.html
-  - field_name: url
-    label: URL
+  - field_name: website
+    label: Website
     def: URL of the website of a coordinator
     form_template: form/textarea.html
   - field_name: email
