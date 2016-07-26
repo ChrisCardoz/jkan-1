@@ -141,6 +141,18 @@ coordinator_fields:
     label: Title
     def: Name of organization, country of organization, URL of organization, name of contact, email address of contact
     form_template: form/textarea.html
+  - field_name: country 
+    label: Country
+    def: Country of Coordinator
+    form_template: form/textarea.html
+  - field_name: url
+    label: URL
+    def: URL of the website of a coordinator
+    form_template: form/textarea.html
+  - field_name: email
+    label: E-mail 
+    def: E-mail adress of contact
+    form_template: form/textarea.html
   - field_name: logo
     label: Logo
     def: URL of an image of the coordinator
