@@ -139,7 +139,7 @@ datastandard_fields:
 coordinator_fields:
   - field_name: title
     label: Title
-    def: Name of organization, country of organization, URL of organization, name of contact, email address of contact
+    def: Name of coordinator
     form_template: form/textarea.html
   - field_name: country 
     label: Country
